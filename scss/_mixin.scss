@@ -1,0 +1,16 @@
+@mixin btn {
+	padding: 19.2px 38.4px;
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	background-color: transparent;
+	border: 2px solid #fff;
+	transition: 0.5s linear;
+}
+
+@mixin btn-hover {
+	background-color: #fff;
+	color: #121212;
+}

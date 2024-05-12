@@ -1,0 +1,172 @@
+/* ------------------------------- font stlye ------------------------------- */
+/* ------------------------------- font stlye ------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: transparent;
+  border: none;
+}
+
+body {
+  font-family: Arial, Verdana, sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background-image: url(/img/qslide-2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.wrapper .banner {
+  position: relative;
+  padding: 3em 68.3px;
+  width: 50%;
+  color: #fff;
+  z-index: 1;
+}
+.wrapper .banner .banner__img {
+  margin-bottom: 1em;
+}
+.wrapper .banner .banner__txt {
+  font-family: Arial, Verdana, sans-serif;
+  font-size: 60px;
+  line-height: 76px;
+}
+.wrapper .banner .banner__smTxt {
+  font-size: 22px;
+  line-height: 31px;
+  margin: 15px 0 30px;
+}
+.wrapper .banner .wrapper--1 {
+  display: flex;
+  gap: 1em;
+}
+.wrapper .banner .wrapper--1 .banner__btn {
+  padding: 19.2px 38.4px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  transition: 0.5s linear;
+}
+.wrapper .banner .wrapper--1 .banner__btn:hover {
+  background-color: #fff;
+  color: #121212;
+}
+.wrapper .banner .wrapper--1 .btn--chg {
+  border: none;
+  background-color: #ff0082;
+}
+.wrapper .banner .wrapper--1 .btn--chg:hover {
+  background-color: #fff;
+  color: #121212;
+}
+.wrapper .banner .wrapper--2 {
+  display: flex;
+  gap: 3em;
+  margin-top: 5em;
+}
+.wrapper .banner .wrapper--2 .banner__icons {
+  font-size: 20px;
+  color: #fff;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.wrapper .banner .wrapper--2 .banner__icons:hover {
+  color: #ff0082;
+  scale: 1.1;
+}
+.wrapper .banner .overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #000000;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  -webkit-clip-path: polygon(0 0, 62% 0, 40% 100%, 0% 100%);
+          clip-path: polygon(0 0, 62% 0, 40% 100%, 0% 100%);
+}
+.wrapper .banner .popup__bg {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-content: center;
+}
+.wrapper .banner .popup__bg .popup__con {
+  background-image: url(/img/background-newsletter.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 500px;
+}
+.wrapper .banner .popup__bg .popup {
+  padding: 90px 70px;
+  border: 2px solid #ff0082;
+  text-align: center;
+  background: #000;
+  opacity: 0.7;
+  position: relative;
+}
+.wrapper .banner .popup__bg .popup .close__btn {
+  height: 40px;
+  width: 40px;
+  background: rgb(49, 48, 48);
+  opacity: 1;
+  cursor: pointer;
+  border-radius: 5px;
+  display: grid;
+  place-content: center;
+  position: absolute;
+  right: 2em;
+  top: 1.5em;
+  transition: 0.5s linear;
+}
+.wrapper .banner .popup__bg .popup .close__btn:hover {
+  background: #fff;
+  color: #000;
+}
+.wrapper .banner .popup__bg .popup .close__btn .close__icon {
+  font-size: 25px;
+}
+.wrapper .banner .popup__bg .popup .popup__sh {
+  font-size: 40px;
+  line-height: 52px;
+  margin-bottom: 25px;
+}
+.wrapper .banner .popup__bg .popup .popup__txt {
+  font-size: 16px;
+  line-height: 26px;
+}
+.wrapper .banner .popup__bg .popup .wrapper--3 {
+  margin-top: 3em;
+}
+.wrapper .banner .popup__bg .popup .wrapper--3 .popup__inpt {
+  padding: 20px 10px;
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+}
+.wrapper .banner .popup__bg .popup .wrapper--3 .popup__btn {
+  padding: 19.2px 38.4px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  transition: 0.5s linear;
+  background-color: #ff0082;
+  border: none;
+  text-transform: uppercase;
+  margin: 20px auto 0;
+}/*# sourceMappingURL=style.css.map */
