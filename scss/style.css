@@ -48,6 +48,7 @@ body {
   padding: 19.2px 38.4px;
   cursor: pointer;
   border-radius: 5px;
+  font-family: inherit;
   font-size: 15px;
   font-weight: bold;
   color: #fff;
@@ -92,6 +93,7 @@ body {
   opacity: 0.7;
   -webkit-clip-path: polygon(0 0, 62% 0, 40% 100%, 0% 100%);
           clip-path: polygon(0 0, 62% 0, 40% 100%, 0% 100%);
+  display: none;
 }
 .wrapper .banner .popup__bg {
   position: absolute;
@@ -101,6 +103,7 @@ body {
   top: 0;
   display: grid;
   place-content: center;
+  display: none;
 }
 .wrapper .banner .popup__bg .popup__con {
   background-image: url(/img/background-newsletter.jpg);
@@ -159,6 +162,7 @@ body {
   padding: 19.2px 38.4px;
   cursor: pointer;
   border-radius: 5px;
+  font-family: inherit;
   font-size: 15px;
   font-weight: bold;
   color: #fff;
@@ -169,4 +173,248 @@ body {
   border: none;
   text-transform: uppercase;
   margin: 20px auto 0;
+}
+
+.sidebar {
+  padding-top: 100px;
+  position: relative;
+  right: 0;
+  top: 0;
+  width: 50%;
+  background: white;
+  height: 100%;
+  z-index: 1;
+  overflow-y: hidden;
+}
+.sidebar .sidebar__con1 {
+  position: relative;
+  padding: 0 68.3px;
+  margin-bottom: 100px;
+}
+.sidebar .sidebar__con1 .close__sidebar {
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2.4rem;
+  font-weight: bold;
+  display: grid;
+  place-content: center;
+  color: #a4b0be;
+  background-color: transparent;
+  position: absolute;
+  right: 1.5em;
+  top: -2em;
+}
+.sidebar .sidebar__con1 .close__sidebar:hover {
+  background: #f9fafb;
+}
+.sidebar .sidebar__con1 .sidebar__lgTxt {
+  font-size: 30px;
+  line-height: 39px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+.sidebar .sidebar__con1 .sidebar__smTxt {
+  font-size: 16px;
+  line-height: 26px;
+  color: #a4b0be;
+}
+.sidebar .sidebar__con2 {
+  background-image: url(/img/pr-1.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  display: flex;
+  align-items: end;
+}
+.sidebar .sidebar__con2 .txt--con {
+  padding: 32px 64px;
+  background: #000;
+  opacity: 0.7;
+}
+.sidebar .sidebar__con2 .txt--con .txt__lgTxt {
+  color: white;
+  font-size: 32px;
+  line-height: 42px;
+  text-transform: uppercase;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #a4b0be;
+}
+.sidebar .sidebar__con2 .txt--con .txt__smTxt {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 16px;
+  color: #a4b0be;
+}
+.sidebar .edit1 {
+  background-image: url(/img/pr-2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.sidebar .dbl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar .dbl .dbl__con1 {
+  background-image: url(/img/pr-3.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  display: flex;
+  align-items: end;
+  position: relative;
+}
+.sidebar .dbl .dbl__con1 .dbl__con {
+  padding: 32px 64px;
+  background: #000;
+  opacity: 0.7;
+}
+.sidebar .dbl .dbl__con1 .dbl__con .dbl__lgTxt {
+  color: white;
+  font-size: 32px;
+  line-height: 42px;
+  text-transform: uppercase;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #a4b0be;
+}
+.sidebar .dbl .dbl__con1 .dbl__con .dbl__smTxt {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 16px;
+  color: #a4b0be;
+}
+.sidebar .dbl .edit2 {
+  background-image: url(/img/pr-4.jpg);
+}
+.sidebar .dbl .edit2 .pt--con {
+  padding: 12.8px 28.5px;
+  border-radius: 5px;
+  background: gray;
+  color: #fff;
+  font-size: 16px;
+  position: absolute;
+  top: 3em;
+  left: 2em;
+  cursor: pointer;
+}
+.sidebar .pink {
+  padding: 150px 0;
+  margin-bottom: 100px;
+  background: #ff0082;
+  color: #fff;
+  text-align: center;
+}
+.sidebar .pink .pink__mdtxt {
+  font-size: 26px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+.sidebar .pink .pink__lgtxt {
+  font-size: 105px;
+  line-height: 105px;
+  margin-bottom: 25px;
+}
+.sidebar .pink .pink__btn {
+  padding: 19.2px 38.4px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  transition: 0.5s linear;
+  font-size: 16px;
+  line-height: 10px;
+  text-transform: uppercase;
+  padding: 24px 48px;
+}
+.sidebar .pink .pink__btn:hover {
+  background: #fff;
+  color: black;
+}
+.sidebar .knwmore {
+  padding: 0 68.3px;
+  margin-bottom: 100px;
+}
+.sidebar .knwmore .knwmore__lgtxt {
+  font-size: 30px;
+  line-height: 39px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+.sidebar .knwmore .knwmore__smtxt {
+  font-size: 16px;
+  line-height: 26px;
+  color: #a4b0be;
+}
+.sidebar .dbl-inpt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.sidebar .dbl-inpt .sm__input {
+  display: block;
+  padding: 28.8px 48px 28.8px 12.8px;
+  background: #f9fafb;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+.sidebar .md__input {
+  padding: 28.8px 48px 28.8px 12.8px;
+  background: #f9fafb;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+.sidebar .lg__txt {
+  padding: 16px 48px 28.8px 12.8px;
+  border-radius: 5px;
+  width: 100%;
+  background: #f9fafb;
+  margin-bottom: 12px;
+}
+.sidebar .knwmore__btn {
+  padding: 19.2px 38.4px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  transition: 0.5s linear;
+  border: none;
+  background: #ff0082;
+  text-transform: uppercase;
+}
+.sidebar .contact {
+  margin-top: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  color: #a4b0be;
+}
+.sidebar .contact .contact__icon {
+  font-size: 3.5em;
+}
+.sidebar .contact .emails {
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.sidebar .contact .emails:hover {
+  color: #ff0082;
+}
+.sidebar .copyright {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #a4b0be;
 }/*# sourceMappingURL=style.css.map */
