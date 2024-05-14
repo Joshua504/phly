@@ -41,6 +41,10 @@
 	padding: 32px 64px;
 	background: #000;
 	opacity: 0.7;
+
+	@include sm-screen {
+		padding: 16px;
+	}
 }
 
 @mixin cardlg--txt {
@@ -65,4 +69,10 @@
 	border-radius: 5px;
 	width: 100%;
 	margin-bottom: 12px;
+}
+
+@mixin sm-screen {
+	@media (width < 767px) {
+		@content;
+	}
 }
