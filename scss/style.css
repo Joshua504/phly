@@ -39,6 +39,7 @@ body {
 .wrapper {
   width: 100%;
   height: 100vh;
+  background-image: url(/img/qslide-1.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
