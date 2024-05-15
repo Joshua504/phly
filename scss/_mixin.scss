@@ -76,3 +76,9 @@
 		@content;
 	}
 }
+
+@mixin md-screen{
+	@media (767px < width < 1024px){
+		@content;
+	}
+}

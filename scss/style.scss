@@ -2,18 +2,47 @@
 @import "reset";
 @import "mixin";
 
+.preloader{
+	background: #000;
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+
+	.loadcon{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		flex-direction: column;
+	}
+
+	.loader{
+		width: 70%;
+		margin-bottom: 15px;
+	}
+}
+
 .wrapper {
 	width: 100%;
 	height: 100vh;
-	background-image: url(/img/qslide-2.jpg);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	// z-index: 1;
+	transition: all 0.5s ease;
 
 	@include sm-screen {
 		padding: 60px 0 0;
 		height: 95vh;
+	}
+	@include md-screen {
+		padding: 150px 0 0px;
+		height: 80vh;
 	}
 
 	.banner {
@@ -26,6 +55,12 @@
 
 		@include sm-screen {
 			padding: 0 11.7px;
+			text-align: center;
+			width: 100%;
+		}
+
+		@include md-screen {
+			padding: 0 82px;
 			text-align: center;
 			width: 100%;
 		}
@@ -62,12 +97,20 @@
 			@include sm-screen {
 				flex-direction: column;
 			}
+			@include md-screen {
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
 
 			.banner__btn {
 				@include btn;
 
 				@include sm-screen {
 					width: 80%;
+				}
+				@include md-screen {
+					width: 100%;
 				}
 
 				&:hover {
@@ -112,9 +155,24 @@
 		width: 100%;
 		height: 100%;
 		opacity: 0.7;
+		transition: all 0.5s linear;
 		clip-path: polygon(0 0, 62% 0, 40% 100%, 0% 100%);
 
 		@include sm-screen {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+		}
+		@include md-screen {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+		}
+	}
+
+	.shape {
+		clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+
+		@include sm-screen {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+		}
+		@include md-screen {
 			clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 		}
 	}
@@ -129,11 +187,8 @@
 	display: grid;
 	place-content: center;
 	z-index: 2;
-	display: none;
-
-	.show-popup {
-		display: block;
-	}
+	visibility: collapse;
+	transition: 0.5s linear;
 
 	.popup__con {
 		background-image: url(/img/background-newsletter.jpg);
@@ -224,17 +279,22 @@
 		}
 	}
 }
+.show-popup {
+	visibility: visible;
+}
 
 .sidebar {
 	padding-top: 100px;
-	position: absolute;
-	right: 0%;
+	position: fixed;
+	right: -100%;
 	top: 0;
 	width: 50%;
 	background: white;
 	height: 100%;
 	z-index: 1;
 	overflow-y: scroll;
+	scroll-behavior: smooth;
+	transition: all 0.5s linear;
 
 	@include sm-screen {
 		position: relative;
@@ -242,9 +302,11 @@
 		width: 100%;
 		overflow-y: auto;
 	}
-
-	.sidebar.active {
+	@include md-screen {
+		position: relative;
 		right: 0;
+		width: 100%;
+		overflow-y: auto;
 	}
 
 	.sidebar__con1 {
@@ -272,6 +334,9 @@
 			top: -2em;
 
 			@include sm-screen {
+				display: none;
+			}
+			@include md-screen {
 				display: none;
 			}
 
@@ -318,6 +383,9 @@
 		align-items: center;
 
 		@include sm-screen {
+			flex-direction: column;
+		}
+		@include md-screen {
 			flex-direction: column;
 		}
 
@@ -473,4 +541,8 @@
 		font-size: 11px;
 		color: #a4b0be;
 	}
+}
+
+.active {
+	right: 0;
 }
