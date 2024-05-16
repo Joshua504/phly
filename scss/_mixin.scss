@@ -77,8 +77,14 @@
 	}
 }
 
-@mixin md-screen{
-	@media (767px < width < 1024px){
+@mixin md-screen {
+	@media (767px < width < 1023px) {
 		@content;
+	}
+}
+
+@mixin lg-screen {
+	@media screen and (min-width: 1025px) and (min-height: 769px){
+		@content
 	}
 }

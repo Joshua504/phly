@@ -26,30 +26,37 @@ closePopup.addEventListener("click", removePopup);
 
 const showSidebar = () => {
 	sideBar.classList.add("active");
-  overlay.classList.add("shape")
+	overlay.classList.add("shape");
 };
 openSidebar.addEventListener("click", showSidebar);
 
 const removeSidebar = () => {
 	sideBar.classList.remove("active");
-  overlay.classList.remove("shape");
+	overlay.classList.remove("shape");
 };
 closeSidebar.addEventListener("click", removeSidebar);
 
 /* ------------------------------- background ------------------------------- */
 
-const images = ["/img/qslide-1.jpg", "/img/qslide-2.jpg", "/img/qslide-3.jpg"];
-
-let currentIndex = 0;
-
-setInterval(() => {
-  backgroundCon.style.backgroundImage = `url("${images[currentIndex]}")`;
-  currentIndex = (currentIndex + 1) % images.length;
-}, 5000);
-
 /* -------------------------------- preloader ------------------------------- */
 
+window.addEventListener("load", function () {
+	loader.style.display = "none";
+});
 
-window.addEventListener("load", function(){
-  loader.style.display = "none"
-})
+const images = ["/img/qslide-1.jpg", "/img/qslide-2.jpg", "/img/qslide-3.jpg"];
+// let currentIndex = 0;
+
+// function changeBackgroundImage() {
+// 	const loaderBar = document.querySelector(".loader-bar");
+// 	const loaderWidth = parseFloat(window.getComputedStyle(loaderBar).width);
+
+// 	if (loaderWidth === 100) {
+// 		backgroundCon.style.backgroundImage = `url(${images[currentIndex]})`;
+// 		currentIndex = (currentIndex + 1) % images.length;
+// 		loaderBar.style.width = "0%";
+// 	} 
+  
+// }
+
+// changeBackgroundImage()
