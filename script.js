@@ -36,27 +36,60 @@ const removeSidebar = () => {
 };
 closeSidebar.addEventListener("click", removeSidebar);
 
-/* ------------------------------- background ------------------------------- */
-
 /* -------------------------------- preloader ------------------------------- */
 
 window.addEventListener("load", function () {
 	loader.style.display = "none";
 });
 
+/* ---------------------------- background-slider --------------------------- */
+
 const images = ["/img/qslide-1.jpg", "/img/qslide-2.jpg", "/img/qslide-3.jpg"];
-// let currentIndex = 0;
+const loaderBar = document.querySelector(".loader-bar");
 
-// function changeBackgroundImage() {
-// 	const loaderBar = document.querySelector(".loader-bar");
-// 	const loaderWidth = parseFloat(window.getComputedStyle(loaderBar).width);
+let animationId;
+let width = 0;
 
-// 	if (loaderWidth === 100) {
-// 		backgroundCon.style.backgroundImage = `url(${images[currentIndex]})`;
-// 		currentIndex = (currentIndex + 1) % images.length;
-// 		loaderBar.style.width = "0%";
-// 	} 
-  
-// }
+function animateLoaderBar() {
+	if (width >= 100) {
+		width = 0;
+	} else {
+		width += 1;
+		loaderBar.style.width = `${width}%`;
+	}
 
-// changeBackgroundImage()
+	animationId = requestAnimationFrame(animateLoaderBar);
+}
+
+function startAnimation() {
+	animationId = requestAnimationFrame(animateLoaderBar);
+}
+
+function resetAnimation() {
+	cancelAnimationFrame(animationId);
+	width = 0;
+	loaderBar.style.width = "0%";
+	setTimeout(startAnimation, 3200); 
+}
+
+startAnimation();
+setInterval(resetAnimation, 5000); 
+
+function backgroundSlider() {
+	let currentIndex = 0;
+	let intervalId;
+
+	function changeBackgroundImage() {
+		backgroundCon.style.backgroundImage = `url(${images[currentIndex]})`;
+		currentIndex = (currentIndex + 1) % images.length;
+	}
+
+	function startAnimation() {
+		intervalId = setInterval(changeBackgroundImage, 5000);
+	}
+
+	startAnimation();
+}
+
+backgroundSlider()
+

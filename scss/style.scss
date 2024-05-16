@@ -307,17 +307,16 @@
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	animation: loading 4s linear infinite;
 }
 
-@keyframes loading {
-	0% {
-		width: 0%;
-	}
-	100% {
-		width: 100%;
-	}
-}
+// @keyframes loading {
+// 	0% {
+// 		width: 0%;
+// 	}
+// 	100% {
+// 		width: 100%;
+// 	}
+// }
 
 .sidebar {
 	padding-top: 100px;
