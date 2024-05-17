@@ -39,11 +39,11 @@
 
 	@include sm-screen {
 		padding: 60px 0 0;
-		height: 95vh;
+		height: 100vh;
 	}
 	@include md-screen {
 		padding: 150px 0 0px;
-		height: 80vh;
+		height: 100vh;
 	}
 
 	.banner {
@@ -67,6 +67,8 @@
 		@include md-screen {
 			padding: 0 82px;
 			text-align: center;
+			justify-content: space-around;
+
 			width: 100%;
 		}
 
@@ -149,6 +151,16 @@
 			display: flex;
 			gap: 3em;
 			margin-top: 3.5em;
+
+			@include sm-screen {
+				margin-top: 0em;
+				padding-bottom: 20px;
+			}
+
+			@include md-screen {
+				margin-top: 0em;
+				padding-bottom: 4.5em;
+			}
 
 			.banner__icons {
 				font-size: 20px;
@@ -580,7 +592,7 @@
 .sidebar::-webkit-scrollbar {
 	direction: rtl;
 }
-.sidebar::-webkit-scrollbar > *{
+.sidebar::-webkit-scrollbar > * {
 	direction: ltr;
 }
 

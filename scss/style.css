@@ -48,13 +48,13 @@ body {
 @media (width < 767px) {
   .wrapper {
     padding: 60px 0 0;
-    height: 95vh;
+    height: 100vh;
   }
 }
 @media (767px < width < 1023px) {
   .wrapper {
     padding: 150px 0 0px;
-    height: 80vh;
+    height: 100vh;
   }
 }
 .wrapper .banner {
@@ -80,6 +80,7 @@ body {
   .wrapper .banner {
     padding: 0 82px;
     text-align: center;
+    justify-content: space-around;
     width: 100%;
   }
 }
@@ -175,6 +176,18 @@ body {
   display: flex;
   gap: 3em;
   margin-top: 3.5em;
+}
+@media (width < 767px) {
+  .wrapper .banner .wrapper--2 {
+    margin-top: 0em;
+    padding-bottom: 20px;
+  }
+}
+@media (767px < width < 1023px) {
+  .wrapper .banner .wrapper--2 {
+    margin-top: 0em;
+    padding-bottom: 4.5em;
+  }
 }
 .wrapper .banner .wrapper--2 .banner__icons {
   font-size: 20px;
