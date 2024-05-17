@@ -354,8 +354,10 @@ body {
   background: white;
   height: 100%;
   z-index: 1;
+  direction: rtl;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  scrollbar-width: 10px;
   transition: all 0.5s linear;
 }
 @media (width < 767px) {
@@ -656,6 +658,22 @@ body {
   text-transform: uppercase;
   font-size: 11px;
   color: #a4b0be;
+}
+
+.sidebar > * {
+  direction: ltr;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.sidebar::-webkit-scrollbar {
+  direction: rtl;
+}
+
+.sidebar::-webkit-scrollbar > * {
+  direction: ltr;
 }
 
 .active {
